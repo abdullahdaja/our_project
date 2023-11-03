@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://bykvmk0kylicf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hio6u"]
+size = Vector3(1690.25, 1500.4, 1901.79)
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_hio6u")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_hio6u")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_hio6u")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_hio6u")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_hio6u")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_hio6u")

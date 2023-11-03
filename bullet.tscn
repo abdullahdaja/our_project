@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://b24jp3osjmjna"]
+
+[ext_resource type="Script" path="res://bullet.gd" id="1_o3if3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g83ce"]
+albedo_color = Color(1, 0.470588, 0, 1)
+metallic_specular = 1.0
+roughness = 0.65
+emission_enabled = true
+emission = Color(1, 0.12549, 0.0862745, 1)
+emission_energy_multiplier = 7.35
+heightmap_scale = 16.0
+heightmap_deep_parallax = true
+heightmap_min_layers = 8
+heightmap_max_layers = 32
+heightmap_flip_tangent = true
+grow_amount = -0.471
+
+[sub_resource type="SphereMesh" id="SphereMesh_5gweo"]
+material = SubResource("StandardMaterial3D_g83ce")
+
+[node name="bullet" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_o3if3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.079, 0, 0, 0, 0.714, 0, 0, 0)
+mesh = SubResource("SphereMesh_5gweo")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0649199, 0.0283071, -0.416387)
+light_color = Color(1, 0.368627, 0, 1)
+light_energy = 16.0
+light_indirect_energy = 2.514
+light_size = 1.0
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 5.21541e-08, 0, -5.21541e-08, 1, 0, 0, 0, 1, 0, 0, -0.0118343)
+target_position = Vector3(0, 0, 1)
